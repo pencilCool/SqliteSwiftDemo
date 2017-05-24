@@ -32,7 +32,6 @@ func openDatabase() -> OpaquePointer {
 }
 
 
-
 //: ## Open a Connection
  let db = openDatabase()
 
