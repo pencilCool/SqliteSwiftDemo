@@ -1,14 +1,14 @@
-import XCPlayground
+import PlaygroundSupport
 import Foundation
 
-private let tutorialDirectoryUrl = XCPlaygroundSharedDataDirectoryURL.appendingPathComponent("SQLiteTutorial")?.resolvingSymlinksInPath()
+private let tutorialDirectoryUrl = playgroundSharedDataDirectory.appendingPathComponent("SQLiteTutorial").resolvingSymlinksInPath()
 
 private enum Database: String {
     case Part1
     case Part2
     
     var path: String {
-        return tutorialDirectoryUrl!.appendingPathComponent("\(self.rawValue).sqlite").relativePath
+        return tutorialDirectoryUrl.appendingPathComponent("\(self.rawValue).sqlite").relativePath
     }
 }
 
